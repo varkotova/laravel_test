@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title></title>
+        <meta name="" content="">
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <form action="/comments" method="POST">
+            <input type="hidden" name="_token" value="{{ csrf_token() }}">
+
+            ИМЯ:
+            <input type="text" name="name"><br>
+            КОММЕНТAРИЙ:<br>
+            <textarea name="text"></textarea>
+            
+<!--            <input type="hidden" name="_method" value="PUT">-->
+            <br>
+            <input type="submit" value="ДОБАВИТЬ">
+        </form>
+    </body>
+</html>
