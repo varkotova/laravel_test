@@ -6,11 +6,10 @@
         <meta charset="UTF-8">
     </head>
     <body>
-        <form action="/comments" method="POST">
-            <input type="hidden" name="_token" value="{{ csrf_token() }}">
+        <form action="/pages" method="POST">
 
             ИМЯ:
-            <input type="text" name="name"><br>
+            <input type="text" name="param"><br>
             КОММЕНТAРИЙ:<br>
             <textarea name="text"></textarea>
             
