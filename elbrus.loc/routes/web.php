@@ -11,14 +11,26 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('/', ['as' => 'home', function () {
     return view('welcome');
-});
+}]);
+Route::get('/anula', ['as' => 'anula', function () {
+    return view('page');
+}]);
 
 Route::get('/about/{id}', 'FirstController@show');
 Route::get('/articles', ['as'=>'articles','uses'=>'Core@getArticles']);
-Route::get('/article/{id}', ['as'=>'article','uses'=>'Core@getArticle']);
-Route::resource('/pages', 'Admin\CoreResource');
+
+Route::get('/article/{page}', ['as'=>'article','uses'=>'Core@getArticle', 'middleware'=>'my']);
+
+
+
+//Route::get('/pages/add', 'Admin\CoreResource@add');
+//Route::resource('/pages', 'Admin\CoreResource');
+
+
+
+
 
 
 
