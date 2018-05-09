@@ -11,17 +11,43 @@
 |
 */
 
-Route::get('/', ['as' => 'home', function () {
-    return view('welcome');
-}]);
-Route::get('/anula', ['as' => 'anula', function () {
-    return view('page');
-}]);
+//Route::get('/', ['as' => 'home', function () {
+//    return view('welcome');
+//}]);
 
-Route::get('/about/{id}', 'FirstController@show');
-Route::get('/articles', ['as'=>'articles','uses'=>'Core@getArticles']);
 
-Route::get('/article/{page}', ['as'=>'article','uses'=>'Core@getArticle', 'middleware'=>'my']);
+//Route::get('/', ['as' => 'home', 'uses' => 'Admin\IndexController@show']);
+
+//Route::get('/', 'Admin\IndexController@show'); //тут шайба покажется!
+//Route::get('/shaiba', 'Admin\ShaibaController@show'); //тут тоже шайба покажется!
+//Route::get('/anula', ['as' => 'anula', function () {
+//    return view('page');
+//}]);
+//Route::get('/about', ['uses' =>'Admin\AboutController@show', 'name' => 'about']);
+
+Route::get('/', ['uses' => 'Elb\ElInController@show', 'name' => 'elbrus_index']);
+Route::get('/generic', ['uses' => 'Elb\ElGeController@show', 'name' => 'elbrus_generic']);
+
+
+
+
+
+
+//Route::get('/shaiba', ['as' => 'shaiba', function () {
+//    return view('shaiba');
+//}]);
+
+
+
+
+
+
+
+
+//Route::get('/about/{id}', 'FirstController@show');
+//Route::get('/articles', ['as'=>'articles','uses'=>'Core@getArticles']);
+//
+//Route::get('/article/{page}', ['as'=>'article','uses'=>'Core@getArticle', 'middleware'=>'my']);
 
 
 

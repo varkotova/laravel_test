@@ -1,0 +1,9 @@
+
+Illuminate:
+C:\OSPanel\domains\elbrus.loc\vendor\laravel\framework\src
+
+helpers.php
+C:\OSPanel\domains\elbrus.loc\vendor\laravel\framework\src\Illuminate\Foundation
+
+шаблоны:
+C:\OSPanel\domains\elbrus.loc\resources\views
