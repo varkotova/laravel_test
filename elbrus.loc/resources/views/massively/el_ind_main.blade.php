@@ -1,7 +1,38 @@
 <!-- Main -->
 <div id="main">
 
+<!--    {{ isset($bvar) ? $bvar : $title }}-->
+<!--    {{ $bvar or 'Default' }}-->
 
+<!--
+    @if(count($data) > 3)
+        больше 3
+    @elseif (count($data) == 3)
+        равно 3
+    @else
+        нет записи
+    @endif
+-->
+    
+<ul>
+    @for($i=0; $i < count ($dataI); $i++ )
+        <li>{{ $dataI[$i] }}</li>
+    @endfor
+</ul>
+    
+<ul>
+    @foreach($data as $k => $value)
+        <li>{{ $k.' => '.$value }}</li>
+    @endforeach
+</ul>
+    
+<ul>
+    @forelse($data as $k => $value)
+    <li>{{ $k.' => '.$value }}</li>
+    @endforeach
+</ul>
+
+    
     <!-- Featured Post -->
     <article class="post featured">
         <header class="major">
