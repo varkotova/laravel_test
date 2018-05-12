@@ -28,6 +28,8 @@
 Route::get('/', ['uses' => 'Elb\ElInController@show', 'name' => 'elbrus_index']);
 Route::get('/generic', ['uses' => 'Elb\ElGeController@show', 'name' => 'elbrus_generic']);
 
+Route::match(['get', 'post'], '/message/{id?}', ['uses' => 'Elb\MessageController@show', 'as' => 'elbrus_message']);
+
 
 
 

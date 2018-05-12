@@ -1,6 +1,6 @@
 <!-- Main -->
 <div id="main">
-
+{{--
 <!--    {{ isset($bvar) ? $bvar : $title }}-->
 <!--    {{ $bvar or 'Default' }}-->
 
@@ -14,6 +14,7 @@
     @endif
 -->
     
+<!--
 <ul>
     @for($i=0; $i < count ($dataI); $i++ )
         <li>{{ $dataI[$i] }}</li>
@@ -26,12 +27,11 @@
     @endforeach
 </ul>
     
-<ul>
-    @forelse($data as $k => $value)
-    <li>{{ $k.' => '.$value }}</li>
-    @endforeach
-</ul>
 
+    
+    @myDir('hello')
+-->
+--}}
     
     <!-- Featured Post -->
     <article class="post featured">

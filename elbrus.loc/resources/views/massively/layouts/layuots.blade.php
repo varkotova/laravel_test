@@ -6,8 +6,8 @@
         <title>{{ $title }}</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-        <link rel="stylesheet" href="assets/css/main.css" />
-        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+        <link rel="stylesheet" href="{{ asset ('css/main.css') }}" />
+        <noscript><link rel="stylesheet" href="{{ asset ('css/noscript.css') }}" /></noscript>
     </head>
     @show
     <body class="is-loading">
@@ -16,6 +16,7 @@
         <div id="wrapper" class="fade-in">
             @section('intro')
             <!-- Intro -->
+<!--
             <div id="intro">
                 <h1>This is<br />
                     Massively</h1>
@@ -25,6 +26,7 @@
                     <li><a href="#header" class="button icon solo fa-arrow-down scrolly">Continue</a></li>
                 </ul>
             </div>
+-->
             @show
             @section('header')
             <!-- Header -->
@@ -59,7 +61,7 @@
             <!-- Footer -->
             <footer id="footer">
                 <section>
-                    <form method="post" action="#">
+                    <form method="post" action="/message">
                         <div class="field">
                             <label for="name">Name</label>
                             <input type="text" name="name" id="name" />
