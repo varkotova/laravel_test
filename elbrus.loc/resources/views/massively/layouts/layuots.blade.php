@@ -31,7 +31,7 @@
             @section('header')
             <!-- Header -->
             <header id="header">
-                <a href="index.html" class="logo">Massively</a>
+                <a href="{{ url('generic') }}" class="logo">Generic</a>
             </header>
             @show
 
