@@ -16,10 +16,10 @@ class ElGeController extends Controller
 //                                ->header('Content-Type', 'newType')
 //                                ->header('Anula', 'Anula')
 //                                ;
-            return response()->download('robots.txt', 'mytext.txt');
+//
+//            return view('massively.elbrus_generic', ['title' => 'massively.elbrus_generic']); 
+            return redirect('/');
 
-
-//            return view('massively.elbrus_generic', ['title' => 'massively.elbrus_generic']);     
         } abort(404);
     }
 }
