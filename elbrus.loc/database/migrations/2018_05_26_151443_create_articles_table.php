@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateMazafakaTable extends Migration
+class CreateArticlesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,13 @@ class CreateMazafakaTable extends Migration
      */
     public function up()
     {
-        Schema::create('mazafaka', function (Blueprint $table) {
+        Schema::create('articles', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('sukablyat');
             $table->timestamps();
+            $table->string('name',100);
+            $table->text('text');
+
+            
         });
     }
 
@@ -27,6 +30,6 @@ class CreateMazafakaTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('mazafaka');
+        Schema::dropIfExists('articles');
     }
 }
