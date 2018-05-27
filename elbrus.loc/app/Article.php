@@ -9,8 +9,16 @@ class Article extends Model
     //
     protected $table = 'articles';
     protected $primarykey = 'id';
-    public $incrementing = FALSE;
-    public $timestamp = FALSE;
-    
-    
+    public $incrementing = TRUE;
+    public $timestamp = TRUE;
+
+    protected $fillable = ['name', 'text'];
+    protected $guarded = ['*'];
+    protected $dates = ['deleted_at'];
+
+    public function user(){
+      return $this->belongsTo('App\User');
+    }
+
+
 }

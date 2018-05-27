@@ -23,7 +23,7 @@
 
 
 
-Route::get('/shaiba', 'Admin\ShaibaController@getArticles'); 
+Route::get('/shaiba', 'Admin\ShaibaController@getArticles');
 //Route::get('/anula', ['as' => 'anula', function () {
 //    return view('page');
 //}]);
@@ -62,13 +62,3 @@ Route::match(['get', 'post'], '/message/{id?}', ['uses' => 'Elb\MessageControlle
 
 //Route::get('/pages/add', 'Admin\CoreResource@add');
 //Route::resource('/pages', 'Admin\CoreResource');
-
-
-
-
-
-
-
-
-
-
