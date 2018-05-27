@@ -42,17 +42,6 @@ Route::match(['get', 'post'], '/message/{id?}', ['uses' => 'Elb\MessageControlle
 
 
 
-//Route::get('/shaiba', ['as' => 'shaiba', function () {
-//    return view('shaiba');
-//}]);
-
-
-
-
-
-
-
-
 //Route::get('/about/{id}', 'FirstController@show');
 //Route::get('/articles', ['as'=>'articles','uses'=>'Core@getArticles']);
 //
@@ -60,5 +49,5 @@ Route::match(['get', 'post'], '/message/{id?}', ['uses' => 'Elb\MessageControlle
 
 
 
-//Route::get('/pages/add', 'Admin\CoreResource@add');
-//Route::resource('/pages', 'Admin\CoreResource');
+// Route::get('/pages/add', 'Admin\CoreResource@add');
+// Route::resource('/pages', 'Admin\CoreResource');
